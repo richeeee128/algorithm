@@ -10,22 +10,19 @@
 // *****
 
 // 1번 풀이
-process.stdin.setEncoding('utf8');
-process.stdin.on('data', data => {
-    const input = data.split(" ");
-    const n = Number(input[0]), m = Number(input[1]);
-    // 5 3 n=5 m=3 별이 다섯개 가로로 찍히고 세로로 3번찍힌다
-    // n은 5번 반복되어야 하는구나!
-    // 반복된 n을 m번 반복해야한다. 
-
-    for(let i = 0; i<m; i++){ //세로
-        let a = "";
-        for(let j = 0; j<n-1; j++){ //가로 
-            a += "*";
-        } 
-        console.log(a += "*"); 
-    }
-});
+    // process.stdin.setEncoding('utf8');
+    // process.stdin.on('data', data => {
+    //     const input = data.split(" ");
+    //     const n = Number(input[0]), 
+    //             m = Number(input[1]);
+    //     for(let i = 0; i<m; i++){ 
+    //         let a = "";
+    //         for(let j = 0; j<n-1; j++){ 
+    //             a += "*";
+    //         } 
+    //         console.log(a += "*"); 
+    //     }
+    // });
 
 //2번 풀이 
 // process.stdin.setEncoding('utf8');
@@ -45,14 +42,22 @@ process.stdin.on('data', data => {
 // });
 
 //3번 풀이 - 차력쇼(?)
-process.stdin.setEncoding('utf8');
-process.stdin.on('data', data => {
-    const n = data.split(" ");
-    const a = Number(n[0]), 
-            b = Number(n[1]);
+// process.stdin.setEncoding('utf8');
+// process.stdin.on('data', data => {
+//     const n = data.split(" ");
+//     const a = Number(n[0]), 
+//             b = Number(n[1]);
     
-    const row = '*'.repeat(a)
-    for(let i =0; i < b; i++){
-        console.log(row)
+//     const row = '*'.repeat(a)
+//     for(let i =0; i < b; i++){
+//         console.log(row)
+//     }
+// });
+
+for(let i = 0; i<m; i++){
+    let a = "";
+    for(let j = 0; j<n-1; j++){
+        a += "*";
     }
-});
+    console.log(a += "*");
+}
