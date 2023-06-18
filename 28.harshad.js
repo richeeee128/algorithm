@@ -29,7 +29,7 @@ function solution(x) {
 
 //수지
 function solution(x) {
-    let arr = String(x).split('') // '1','0'
+    let arr = String(x).split('') 
     let sum = arr.reduce((sum,b) => sum + parseInt(b), 0); 
     return (x%sum) === 0 
 }
